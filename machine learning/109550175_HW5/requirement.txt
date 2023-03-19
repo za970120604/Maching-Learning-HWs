@@ -1,0 +1,17 @@
+python version = 3.9.15
+tensorflow version = 2.11.0                
+keras version = 2.11.0                          
+keras-preprocessing version = 1.1.2
+
+A. how to run the code for each task and get the trained weight for each task : 
+
+simply run each notebook file and then you'll get the corresponding weight
+the trained weight is saved as "parti_model.h5" for i-th tasks in the same directory as each notebook file
+
+B. how to generate predictions :  In inference.py
+
+1. change the path to the testing dataset task i-th folder in the function "preprocess" for task1 in line 56(i==1) , and task2 in line 57(i==2) , task3 in line 58(i==3) ; and make sure you set "is_test = True" in "preprocess"
+2. plug in the path of your task1 model weight in line 67 , and task2 model weight in line 77 , task3 model in line 92(the submitted file already have three models weight that can be run directly , TA can just run this inference.py , to check wheter the result match the result shown in the report)
+(and these three model weight  , which are in the "model" folder , are pretrained using the submitted notebook files)
+3.simply run inference.py , and it'll generate a csv file named "final_prediction.csv" in the same directory as inference.py
+
